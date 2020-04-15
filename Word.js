@@ -5,10 +5,30 @@
 // (the first function defined in Letter.js) that displays the character or an underscore and concatenate those together.
 //     A function that takes a character as an argument and calls the guess function on each letter object (the second function defined in Letter.js)
 
-var Letter = require("Letter.js")
+var Letter = require("./letter.js");
 
-function Word(word){
-    this.word = word
+function Word(answer) {
+  //Letter objects array
+  this.objArray = [];
 
+  for (var i = 0; i < answer.length; i++) {
+    var letter = new Letter(answer[i]);
+    this.objArray.push(letter);
+  }
+
+  this.log = function() {
+    answerLog = "";
+    for (var i = 0; i < this.objArray.length; i++) {
+      answerLog += this.objArray[i] + " ";
+    }
+    console.log(answerLog + "\n========================\n");
+  };
+
+  this.userGuess = function(input) {
+    for (var i = 0; i < this.objArray.length; i++) {
+      this.objArray[i].guess(input);
+    }
+  };
 }
 
+module.exports = Word;
