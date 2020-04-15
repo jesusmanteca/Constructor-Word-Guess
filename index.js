@@ -9,11 +9,8 @@ var RickAndMorty = [
   "Rick Sanchez",
   "Morty Smith",
   "Jerry Smith",
-  "Jerry C-137",
   "Summer Smith",
-  "Summer C-137",
   "Beth Smith",
-  "Beth C-137",
   "Beth Clone",
   "The Trans-Dimensional Council of Ricks",
   "Doofus Rick",
@@ -24,8 +21,6 @@ var RickAndMorty = [
   "Cop Morty",
   "Shadow Council of Ricks",
   "Rick D. Sanchez III",
-  "Beth C-500A",
-  "Jerry C-500A",
   "Mr. Meeseeks",
   "Scary Terry",
   "Dr. Xenon Bloom",
@@ -94,7 +89,7 @@ function theLogic() {
       .prompt([
         {
           type: "input",
-          message: "Guess a letter between A-Z!",
+          message: "Guess the Rick and Morty Character!",
           name: "userinput"
         }
       ])
